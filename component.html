@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Tutorial</title>
+</head>
+<body>
+    
+    <div id="app">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="employee.html">Employee</a>
+            <a href="post.html">Post</a>
+            <a href="component.html">Component</a>
+        </nav>
+        <hr>
+        <div>
+            <!-- Component -->
+            <Chong></Chong>
+            <Chong></Chong>
+            <br>
+            <br>
+            <!-- Props -->
+            <post title="AAA"></post>
+            <post title="BBB"></post>
+
+            <br><br>
+            <!-- Props Validate -->
+            <showview title="BBB" v-bind:view="100"></showview>
+            <showview title="CCC"></showview>
+            <showview title="DDD" v-bind:view=10></showview>
+
+            <br><br>
+            <!-- Data & Component -->
+            <input type="text" v-model="newComment" @keyup.enter="addComment()">
+            <ul>
+                <li v-for="comment in comments" 
+                is="showComment" 
+                v-bind:commentpost="comment"
+                ></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/component.js"></script>
+</body>
+</html>
