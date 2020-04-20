@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Tutorial</title>
+</head>
+<body>
+    
+    <div id="app">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="employee.html">Employee</a>
+            <a href="post.html">Post</a>
+        </nav>
+
+        <div id="post">
+            <div>
+                {{ title }}
+            </div>
+            {{ message }}
+        </div>
+        <div id="comment"></div>
+        <div id="like">
+
+            <button type="button" v-on:click="changeLike()">Like</button>
+            {{ status }}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="post.js"></script>
+</body>
+</html>
