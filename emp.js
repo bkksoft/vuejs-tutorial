@@ -26,5 +26,21 @@ new Vue({
             this.postData.name = '';
             this.postData.salary = 0;
         }
+    },
+    computed: {
+        sumation : function(){
+            let sum = this.employees.reduce((value, data)=>{
+                return value + Number(data.salary)
+            }, 0)
+
+            return sum;
+        },
+        avg: function (){
+            let sum = this.employees.reduce((value, data)=>{
+                return value + Number(data.salary)
+            }, 0)
+
+            return sum/this.employees.length
+        }
     }
 })
