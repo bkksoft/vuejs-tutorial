@@ -1,6 +1,10 @@
 new Vue({
     el: '#app',
     data: {
+        message: {
+            show: false,
+            text: '',
+        },
         postData: {
             name: '',
             salary: 0
@@ -25,6 +29,17 @@ new Vue({
 
             this.postData.name = '';
             this.postData.salary = 0;
+        },
+        showMessage: function (){
+
+            console.log( 'saved..' );
+
+            // this.message.text = 'Saved.';
+            // message.show = true;
+
+            // setTimeout( function(){
+            //     message.show = false
+            // }, 13000 );
         }
     },
     computed: {
@@ -41,6 +56,11 @@ new Vue({
             }, 0)
 
             return sum/this.employees.length
+        }
+    },
+    watch: {
+        sumation: function(){
+            this.showMessage();
         }
     }
 })
