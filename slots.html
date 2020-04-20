@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Tutorial</title>
+</head>
+<body>
+    
+    <div id="app">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="employee.html">Employee</a>
+            <a href="post.html">Post</a>
+            <a href="component.html">Component</a>
+        </nav>
+
+        <br><br>
+
+        <food-app>
+            <h2>Thai Food</h2>
+            <ul>
+                <li>Tom Yum Kong</li>
+                <li>Pad Mama</li>
+            </ul>
+        </food-app>
+
+        <food-app>
+            <h2>Thai Japan</h2>
+            <ul>
+                <li>Maki</li>
+                <li>Nigiri</li>
+            </ul>
+        </food-app>
+        
+    </div>
+
+    <template id="foodarea">
+        <div id="food">
+            <h4>Menu</h4>
+            <slot></slot>
+        </div>
+    </template>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/slots.js"></script>
+</body>
+</html>
