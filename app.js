@@ -4,6 +4,7 @@ new Vue({
         message: 'Hello World',
         name: 'Chong',
         job: 'Dev',
+        age: 20,
         website: 'https://bkksoft.me'
     },
     methods: {
@@ -12,6 +13,12 @@ new Vue({
         },
         setName: function( txt ){
             return this.name = txt;
+        },
+        addAge: function () {
+            this.age++;
+        },
+        subtractAge: function(){
+            this.age--;
         }
     }
 })

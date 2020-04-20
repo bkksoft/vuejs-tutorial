@@ -13,8 +13,18 @@
         <div>
             <div>Name: {{ name }}</div>
             <div>Job: {{ job }}</div>
+            <div>
+                <span>Age: {{ age }}</span> 
+                <button type="button" v-on:click="addAge()">Add Age</button>
+                <button type="button" v-on:click="subtractAge()">Subtract</button></div>
             <div>Website: <a v-bind:href="website" target="_blank">{{website}}</a></div>
+            <hr>
 
+            <input type="text" v-bind:value="name" >
+            <input type="text" v-bind:value="job" >
+
+            <hr>
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
