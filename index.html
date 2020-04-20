@@ -27,6 +27,12 @@
             
             <button type="button" v-on:click="like=!like" >Like</button>
             <h2 v-if="like">สวัสดี</h2>
+
+            <hr>
+
+            <ul>
+                <li v-for="item in products">{{ item }}</li>
+            </ul>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

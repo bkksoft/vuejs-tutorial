@@ -8,6 +8,8 @@ new Vue({
         website: 'https://bkksoft.me',
 
         like: false,
+
+        products: [ 'Mac', 'iPad', 'iPhone', 'Watch', 'Music']
     },
     methods: {
         getName: function(){
