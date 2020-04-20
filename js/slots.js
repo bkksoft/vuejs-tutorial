@@ -2,7 +2,7 @@ Vue.component('mainMenu', {
     
     data: function(){
         return {
-            inavs: [
+            navs: [
                 { title: 'Getting Started', link: 'index.html' },
                 { title: 'Basic', link: 'basic.html' },
                 { title: 'Multiple Vue', link: 'multiple-vue.html' },
@@ -13,7 +13,7 @@ Vue.component('mainMenu', {
     },
     props: ['curent'],
 
-    template: '<h1>Vue.js - Tutorial</h1><nav><a v-for="nav in navs" v-bind:href="nav.link">{{ nav.title }}</a></nav>'
+    template: '<h1>Vue.js - Tutorial</h1><nav><a @for="nav in navs">kkk</a></nav>'
 });
 
 var food = {
