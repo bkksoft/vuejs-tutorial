@@ -5,7 +5,9 @@ new Vue({
         name: 'Chong',
         job: 'Dev',
         age: 20,
-        website: 'https://bkksoft.me'
+        website: 'https://bkksoft.me',
+
+        like: false,
     },
     methods: {
         getName: function(){
