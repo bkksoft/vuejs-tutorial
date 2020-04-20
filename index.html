@@ -7,7 +7,16 @@
 </head>
 <body>
     
-    <div id="app">{{message}}</div>
+    <div id="app">
+        {{message}}
+
+        <div>
+            <div>Name: {{ name }}</div>
+            <div>Job: {{ job }}</div>
+            <div>Website: <a v-bind:href="website" target="_blank">{{website}}</a></div>
+
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
 </body>
